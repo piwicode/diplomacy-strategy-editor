@@ -1,0 +1,466 @@
+<?xml version="1.0" standalone="yes"?>
+<gamerule>
+
+	<army fullName="Turquie"    	  shortName="TU" flagFN="/res/TU.gif" armyFN="/res/TU_A.gif" fleetFN="/res/TU_F.gif" color="16777215"/>
+	<army fullName="Allemagne"  	  shortName="AL" flagFN="/res/AL.gif" armyFN="/res/AL_A.gif" fleetFN="/res/AL_F.gif" color="16711680"/>
+	<army fullName="France"     	  shortName="FR" flagFN="/res/FR.gif" armyFN="/res/FR_A.gif" fleetFN="/res/FR_F.gif" color="255"/>
+	<army fullName="Autriche-Hongrie" shortName="AH" flagFN="/res/AH.gif" armyFN="/res/AH_A.gif" fleetFN="/res/AH_F.gif" color="0"/>
+	<army fullName="Russie"     	  shortName="RU" flagFN="/res/RU.gif" armyFN="/res/RU_A.gif" fleetFN="/res/RU_F.gif" color="16776960"/>
+	<army fullName="Italie"     	  shortName="IT" flagFN="/res/IT.gif" armyFN="/res/IT_A.gif" fleetFN="/res/IT_F.gif" color="65280"/>
+	<army fullName="Angleterre" 	  shortName="GB" flagFN="/res/GB.gif" armyFN="/res/GB_A.gif" fleetFN="/res/GB_F.gif" color="65535"/>
+
+	<map mapImage="/res/MAP.gif" mapXML="/res/output.xml">	
+		<province name="North Athlantic" ressource="false">
+			<place name="nat">
+				<adjacency type="liquid" refs="nrg mid iri lvp cly"/>
+			</place>
+		</province>
+		<province name="Norwegian Sea" ressource="false">
+			<place name="nrg">
+				<adjacency type="liquid" refs="nat cly edi nth nwy bar"/>
+			</place>
+		</province>
+		<province name="Barents Sea" ressource="false">
+			<place name="bar">
+				<adjacency type="liquid" refs="nrg nwy stp"/>
+			</place>
+		</province>
+		<province name="Norway" ressource="true">
+			<place name="nwy">
+				<adjacency type="liquid" refs="stp fin bar nrg nth ska swe"/>
+				<adjacency type="solid" refs="swe fin stp"/>
+			</place>
+		</province>
+		<province name="Sweden" ressource="true">
+			<place name="swe">
+				<adjacency type="liquid" refs="nwy ska den bal bot fin" />				
+				<adjacency type="solid" refs="nwy den fin" />				
+			</place>
+		</province>
+		<province name="Finland" ressource="false">
+			<place name="fin">
+				<adjacency type="liquid" refs="swe bot stp" />				
+				<adjacency type="solid" refs="swe nwy stp" />				
+			</place>
+		</province>
+		<province name="Saint Petersburg" ressource="true">
+			<place name="stp">
+				<adjacency type="solid" refs="nwy fin lvn mos" />				
+			</place>
+			<place name="nstp">
+				<adjacency type="liquid" refs="nwy bar" />				
+			</place>
+			<place name="sstp">
+				<adjacency type="liquid" refs="fin bot lvn" />				
+			</place>
+		</province>
+		<province name="Moscow" ressource="true">
+			<place name="mos">
+				<adjacency type="solid" refs="stp lvn war ukr ste" />				
+			</place>
+		</province>
+		<province name="Livonia" ressource="false">
+			<place name="lvn">
+				<adjacency type="solid"  refs="pru war mos stp" />
+				<adjacency type="liquid" refs="stp bot bal pru" />					
+			</place>
+		</province>
+		<province name="Prussia" ressource="false">
+			<place name="pru">
+				<adjacency type="solid"  refs="ber sil war lvn" />
+				<adjacency type="liquid" refs="ber bal lvn" />					
+			</place>
+		</province>
+		<province name="Gulf od Bothnia" ressource="false">
+			<place name="bot">
+				<adjacency type="liquid" refs="swe fin stp lvn bal" />					
+			</place>
+		</province>
+		<province name="Baltic Sea" ressource="false">
+			<place name="bal">
+				<adjacency type="liquid" refs="den swe bot lvn pru ber kie" />					
+			</place>
+		</province>
+		<province name="Skagerrak" ressource="false">
+			<place name="ska">
+				<adjacency type="liquid" refs="nth nwy swe den" />					
+			</place>
+		</province>
+		<province name="Denmark" ressource="true">
+			<place name="den">
+				<adjacency type="liquid" refs="kie hel nth ska swe bal"/>
+				<adjacency type="solid" refs="swe kie"/>
+			</place>
+		</province>
+		<province name="North Sea" ressource="false">
+			<place name="nth">
+				<adjacency type="liquid" refs="edi yor lon eng bel hol hel den ska nor nrg"/>
+			</place>
+		</province>
+		<province name="Edinburgh" ressource="true">
+			<place name="edi">
+				<adjacency type="liquid" refs="cly nrg nth yor"/>
+				<adjacency type="solid" refs="cly lvp yor"/>
+			</place>
+		</province>
+		<province name="Clyde" ressource="false">
+			<place name="cly">
+				<adjacency type="liquid" refs="lvp nat nrg"/>
+				<adjacency type="solid" refs="edi lvp"/>
+			</place>
+		</province>
+		<province name="Liverpool" ressource="true">
+			<place name="lvp">
+				<adjacency type="liquid" refs="wal iri nat cly"/>
+				<adjacency type="solid" refs="wal yor edi cly"/>
+			</place>
+		</province>
+		<province name="Wales" ressource="false">
+			<place name="wal">
+				<adjacency type="liquid" refs="lvp iri eng lon"/>
+				<adjacency type="solid" refs="lvp yor lon"/>
+			</place>
+		</province>
+		<province name="London" ressource="true">
+			<place name="lon">
+				<adjacency type="liquid" refs="wal eng nth yor"/>
+				<adjacency type="solid" refs="wal lvp yor"/>
+			</place>
+		</province>
+		<province name="York" ressource="false">
+			<place name="yor">
+				<adjacency type="liquid" refs="edi nth lon"/>
+				<adjacency type="solid" refs="edi lvp lon"/>
+			</place>
+		</province>
+		<province name="Helgoland Bight" ressource="false">
+			<place name="hel">
+				<adjacency type="liquid" refs="nth hol kie den"/>
+			</place>
+		</province>
+		<province name="English Channel" ressource="false">
+			<place name="eng">
+				<adjacency type="liquid" refs="iri mid bre pic bel nth lon wal"/>
+			</place>
+		</province>
+		<province name="Irish sea" ressource="false">
+			<place name="iri">
+				<adjacency type="liquid" refs="nat lvp wal eng mid"/>
+			</place>
+		</province>
+		<province name="Mid Atlantic" ressource="false">
+			<place name="mid">
+				<adjacency type="liquid" refs="nat iri eng bre gas nspa por sspa naf"/>
+			</place>
+		</province>
+		<province name="Spain" ressource="true">
+			<place name="nspa">
+				<adjacency type="liquid" refs="por mid gas"/>
+			</place>
+			<place name="sspa">
+				<adjacency type="liquid" refs="por mid wes gul mar"/>
+			</place>
+			<place name="spa">
+				<adjacency type="solid" refs="por gas mar"/>
+			</place>
+		</province>
+		<province name="Portugal" ressource="true">
+			<place name="por">
+				<adjacency type="liquid" refs="nspa mid sspa"/>
+				<adjacency type="solid" refs="spa"/>
+			</place>
+		</province>
+		<province name="North Africa" ressource="false">
+			<place name="naf">
+				<adjacency type="liquid" refs="mid wes tun"/>
+				<adjacency type="solid" refs="spa tun"/>
+			</place>
+		</province>
+		<province name="Tunisia" ressource="true">
+			<place name="tun">
+				<adjacency type="liquid" refs="naf wes tyn ion"/>
+				<adjacency type="solid" refs="naf"/>
+			</place>
+		</province>
+		<province name="West Mediterranean" ressource="false">
+			<place name="wes">
+				<adjacency type="liquid" refs="sspa mid naf tun tyn gol"/>
+			</place>
+		</province>
+		<province name="Gulf of Lyon" ressource="false">
+			<place name="gol">
+				<adjacency type="liquid" refs="sspa mar pie tus tyr wes"/>
+			</place>
+		</province>
+		<province name="Tyrhennian Sea" ressource="false">
+			<place name="tyn">
+				<adjacency type="liquid" refs="wes gol tus rom nap ion tun"/>
+			</place>
+		</province>
+		<province name="Ionia Sea" ressource="false">
+			<place name="ion">
+				<adjacency type="liquid" refs="tun tyn nap adr alb gre aeg eas"/>
+			</place>
+		</province>
+		<province name="Adriatic Sea" ressource="false">
+			<place name="adr">
+				<adjacency type="liquid" refs="ven tri alb ion apu"/>
+			</place>
+		</province>
+		<province name="Aegean Sea" ressource="false">
+			<place name="aeg">
+				<adjacency type="liquid" refs="ion gre bul con smy eas"/>
+			</place>
+		</province>
+		<province name="East Mediterranee" ressource="false">
+			<place name="eas">
+				<adjacency type="liquid" refs="ion aeg smy syr"/>
+			</place>
+		</province>
+		<province name="Black Sea" ressource="false">
+			<place name="bla">
+				<adjacency type="liquid" refs="ebul rum ste arm ank con"/>
+			</place>
+		</province>
+		<province name="Moscow" ressource="true">
+			<place name="mos">
+				<adjacency type="solid" refs="stp lvn war ukr ste"/>
+			</place>
+		</province>
+		<province name="Stevastopol" ressource="true">
+			<place name="ste">
+				<adjacency type="solid" refs="mos ukr rum arm"/>
+				<adjacency type="liquid" refs="rum bla arm"/>
+			</place>
+		</province>
+		<province name="Armenia" ressource="false">
+			<place name="arm">
+				<adjacency type="solid" refs="ste ank smy syr"/>
+				<adjacency type="liquid" refs="ank bla ste"/>
+			</place>
+		</province>
+		<province name="Syria" ressource="false">
+			<place name="syr">
+				<adjacency type="solid" refs="smy arm"/>
+				<adjacency type="liquid" refs="eas smy"/>
+			</place>
+		</province>
+		<province name="Smyrna" ressource="true">
+			<place name="smy">
+				<adjacency type="solid" refs="con ank arm syr"/>
+				<adjacency type="liquid" refs="con aeg eas syr"/>
+			</place>
+		</province>
+		<province name="Ankara" ressource="true">
+			<place name="ank">
+				<adjacency type="solid" refs="con smy arm"/>
+				<adjacency type="liquid" refs="con bla arm"/>
+			</place>
+		</province>
+		<province name="Constantinople" ressource="true">
+			<place name="con">
+				<adjacency type="solid" refs="bul ank smy"/>
+				<adjacency type="liquid" refs="ebul sbul bla ank smy aeg sbul"/>
+			</place>
+		</province>
+		<province name="Grece" ressource="true">
+			<place name="gre">
+				<adjacency type="solid" refs="alb ser bul"/>
+				<adjacency type="liquid" refs="abl ion aeg bul"/>
+			</place>
+		</province>
+		<province name="Albania" ressource="false">
+			<place name="alb">
+				<adjacency type="solid" refs="tri ser gre"/>
+				<adjacency type="liquid" refs="tri adr ion gre"/>
+			</place>
+		</province>
+		<province name="Serbia" ressource="true">
+			<place name="ser">
+				<adjacency type="solid" refs="tri bud rum bul gre alb"/>
+			</place>
+		</province>
+		<province name="Bulgaria" ressource="true">
+			<place name="ebul">
+				<adjacency type="liquid" refs="rum bla con"/>
+			</place>
+			<place name="sbul">
+				<adjacency type="liquid" refs="gre aeg con"/>
+			</place>
+			<place name="bul">
+				<adjacency type="solid" refs="con gre ser rum"/>
+			</place>
+		</province>
+		<province name="Rumania" ressource="true">
+			<place name="rum">
+				<adjacency type="solid" refs="bul ser bud gal ukr ste"/>
+				<adjacency type="liquid" refs="bul bla ste"/>
+			</place>
+		</province>
+		<province name="Ukraine" ressource="false">
+			<place name="ukr">
+				<adjacency type="solid" refs="gal rum ste mos lvn war"/>
+			</place>
+		</province>
+		<province name="Livonia" ressource="false">
+			<place name="lvn">
+				<adjacency type="solid" refs="pru war mos stp"/>
+				<adjacency type="liquid" refs="pru bal bot sstp"/>
+			</place>
+		</province>		
+		<province name="Warsaw" ressource="true">
+			<place name="war">
+				<adjacency type="solid" refs="pru sil gal ukr mos lvn"/>
+			</place>
+		</province>		
+		<province name="Galica" ressource="false">
+			<place name="gal">
+				<adjacency type="solid" refs="war ukr rum bud vie boh sil"/>
+			</place>
+		</province>		
+		<province name="Budapest" ressource="true">
+			<place name="bud">
+				<adjacency type="solid" refs="vie gal rum ser tri"/>
+			</place>
+		</province>		
+		<province name="Trieste" ressource="true">
+			<place name="tri">
+				<adjacency type="solid" refs="ven tyr vie bud ser alb"/>
+				<adjacency type="liquid" refs="ven adr alb"/>
+			</place>
+		</province>		
+		<province name="Venezia" ressource="true">
+			<place name="ven">
+				<adjacency type="solid" refs="pie tyr tri bud ser alb"/>
+				<adjacency type="liquid" refs="tie adr apu"/>
+			</place>
+		</province>		
+		<province name="Apulia" ressource="false">
+			<place name="apu">
+				<adjacency type="solid" refs="ven rom nap"/>
+				<adjacency type="liquid" refs="ven adr ion nap"/>
+			</place>
+		</province>		
+		<province name="Napoli" ressource="true">
+			<place name="nap">
+				<adjacency type="solid" refs="rom apu"/>
+				<adjacency type="liquid" refs="apu ion tyn rom"/>
+			</place>
+		</province>		
+		<province name="Roma" ressource="true">
+			<place name="rom">
+				<adjacency type="solid" refs="tus ven apu nap"/>
+				<adjacency type="liquid" refs="tus tyn nap"/>
+			</place>
+		</province>		
+		<province name="Tuscany" ressource="false">
+			<place name="tus">
+				<adjacency type="solid" refs="pie ven rom"/>
+				<adjacency type="liquid" refs="pie gol tyn rom"/>
+			</place>
+		</province>		
+		
+		<province name="Piemonte" ressource="false">
+			<place name="pie">
+				<adjacency type="solid" refs="mar tyr ven rom"/>
+				<adjacency type="liquid" refs="pie gol tyn rom"/>
+			</place>
+		</province>		
+		<province name="Marseille" ressource="true">
+			<place name="mar">
+				<adjacency type="solid" refs="spa gas bur pie"/>
+				<adjacency type="liquid" refs="sspa gul pie"/>
+			</place>
+		</province>		
+		<province name="Gascony" ressource="false">
+			<place name="gas">
+				<adjacency type="solid" refs="spa bre par bur mar"/>
+				<adjacency type="liquid" refs="nspa mid bre"/>
+			</place>
+		</province>		
+		<province name="Brest" ressource="true">
+			<place name="bre">
+				<adjacency type="solid" refs="pic par gas"/>
+				<adjacency type="liquid" refs="gas mid eng pic"/>
+			</place>
+		</province>		
+		
+		<province name="Picardy" ressource="false">
+			<place name="pic">
+				<adjacency type="solid" refs="bre par bur bel"/>
+				<adjacency type="liquid" refs="bre end bel"/>
+			</place>
+		</province>		
+		<province name="Belgium" ressource="true">
+			<place name="bel">
+				<adjacency type="solid" refs="pic bur ruh hol"/>
+				<adjacency type="liquid" refs="pic eng nth hol"/>
+			</place>
+		</province>		
+		
+		<province name="Holland" ressource="true">
+			<place name="hol">
+				<adjacency type="solid" refs="bel ruh kie"/>
+				<adjacency type="liquid" refs="bel nth hel kie"/>
+			</place>
+		</province>		
+		<province name="Kiel" ressource="true">
+			<place name="kie">
+				<adjacency type="solid" refs="hol ruh mun ber den"/>
+				<adjacency type="liquid" refs="hol hel den ber"/>
+			</place>
+		</province>		
+		
+		<province name="Berlin" ressource="true">
+			<place name="ber">
+				<adjacency type="solid" refs="pru sil mun kie"/>
+				<adjacency type="liquid" refs="kie bal pru"/>
+			</place>
+		</province>		
+		
+		<province name="Silesia" ressource="false">
+			<place name="sil">
+				<adjacency type="solid" refs="mun ber pru war gal boh"/>
+			</place>
+		</province>		
+		<province name="Bohemia" ressource="false">
+			<place name="boh">
+				<adjacency type="solid" refs="mun sil gal vie tyr"/>
+			</place>
+		</province>		
+		
+		<province name="Vienna" ressource="true">
+			<place name="vie">
+				<adjacency type="solid" refs="tyr boh gal bud tri"/>
+			</place>
+		</province>		
+		<province name="Tyrolia" ressource="false">
+			<place name="tyr">
+				<adjacency type="solid" refs="mun boh vie try ven pie"/>
+			</place>
+		</province>		
+
+		<province name="Munich" ressource="true">
+			<place name="mun">
+				<adjacency type="solid" refs="bur rhu kie ber sil boh tyr"/>
+			</place>
+		</province>		
+		<province name="Ruhr" ressource="false">
+			<place name="ruh">
+				<adjacency type="solid" refs="bel hol kie mun bur"/>
+			</place>
+		</province>		
+		<province name="Burgundy" ressource="false">
+			<place name="bur">
+				<adjacency type="solid" refs="mar gas par pic bel ruh mun"/>
+			</place>
+		</province>		
+		<province name="Paris" ressource="true">
+			<place name="par">
+				<adjacency type="solid" refs="bre pic bur gas"/>
+			</place>
+		</province>		
+		
+		
+	</map>
+</gamerule>

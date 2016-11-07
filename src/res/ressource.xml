@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<ressources>
+	<icon name="bean" default="/res/trash.png" highlight="/res/trashhighlight.png"/>
+	<icon name="load" default="/res/load.png" highlight="/res/loadhighlight.png"/>
+	<icon name="save" default="/res/save.png" highlight="/res/savehighlight.png"/>
+	<icon name="new" default="/res/new.png" highlight="/res/newhighlight.png"/>
+</ressources>

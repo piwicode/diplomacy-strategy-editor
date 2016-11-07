@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="file:/E:/diplomacy-strategy-editor\DiplomacyStrategyEditor/" href="diplomacy-strategy-editor-local.jnlp" spec="1.0+">
+    <information>
+        <title>Diplomacy Strategy Editor</title>
+        <vendor>Pierre LABATUT</vendor>
+        <homepage href="http://code.google.com/p/diplomacy-strategy-editor"/>
+        <description>Diplomacy tactical maps editor.</description>        
+        <description kind="short">Diplomacy Strategy Editor</description>
+        <icon kind="default" href="diplomacy-strategy-editor.gif"/>         
+        <icon kind="shortcut" href="diplomacy-strategy-editor.gif"/> 
+        <offline-allowed/>
+        <association mime-type="application-x/diplomacy-file" extensions="diplo"/>
+        <shortcut>
+            <desktop/>
+            <menu submenu="Diplomacy"/>
+        </shortcut>
+    </information>
+    <update check="always" policy="prompt-update"/>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <jar href="dist/diplomacy-strategy-editor.jar" main="true"/>
+		<jar href="dist/lib/jnlp.jar"/>
+        <j2se version="1.6+"/> 		
+          
+        <property name="help.url" value="http://code.google.com/p/diplomacy-strategy-editor" />
+        <property name="about.title" value="Diplomacy Strategy Editor" />
+        <property name="about.vendor" value="Pierre LABATUT" />
+        <property name="about.version" value="8" />
+        <property name="about.homepage" value="http://code.google.com/p/diplomacy-strategy-editor" /> 
+    </resources>     
+    <application-desc main-class="diplo.framework.ApplicationFrame">
+    </application-desc>
+</jnlp>
