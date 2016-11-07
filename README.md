@@ -49,11 +49,11 @@ First drag a map from the tool bar to the working area.
 *   It is possible to translate the working area, by pressing the middle button while moving the mouse.
 *   It is also possible to zoom in and zoom out, by pressing the mouse right button while moving the mouse up and down.
 
-![](docs/images/diplo-tuto-01-full.jpg)
+![](docs/images/diplo-tuto-01.jpg)
 
 Now lets drag a few troops and resource center's flags. Notice that the tanks can only be dropped on the ground and fleet only on the sea. A nice shape highlights the country that is under the mouse to ease the placement.
 
-![http://sites.google.com/site/pierrelabatut/diplo-tuto-03-large.jpg](http://sites.google.com/site/pierrelabatut/diplo-tuto-03-large.jpg)
+![](docs/images/diplo-tuto-03.jpg)
 
 It is possible to remove items from a map by dropping them into the recycle. It highlights to show that the army will be removed.
 
