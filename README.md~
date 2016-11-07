@@ -30,7 +30,7 @@ Play diplomacy at: [http://www.diplomatie-online.net](http://www.diplomatie-onli
 
 This tool is based on a database of countries, name shape and adjacency graph. I have build an editor to help me to create all these data. Provided I'm a single programmer I used Powerpoint extensibility to build an editor.
 
-![](docs/images/diplo-tuto-00.jpg)
+![](docs/images/diplo-tuto-00-large.jpg)
 
 For each country I draw the shape of all places where an army can be dropped. Notice that in Spain there is only one country, but there is one place for tanks an two coasts for fleets. On each place with a resource center I draw a circle to define where the resource center icon is located. Then for each place I draw a rectangle to locate where the troop icon will be drawn. Finally for each place I write the place's name in the web text replacement field of the shape.
 
